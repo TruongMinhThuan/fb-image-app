@@ -12,17 +12,17 @@ const trendingData = [
     {
         title: 'Trending #1 Weekly',
         items: [
-            { src: 'https://i.pinimg.com/736x/d2/c2/1e/d2c21edb97d151b570be0ad889063f18.jpg', views: 1500 },
-            { src: 'https://i.pinimg.com/736x/d2/c2/1e/d2c21edb97d151b570be0ad889063f18.jpg', views: 1300 },
-            { src: 'https://i.pinimg.com/736x/d2/c2/1e/d2c21edb97d151b570be0ad889063f18.jpg', views: 1100 }
+            { src: 'https://snafty-manga-dev.s3.ap-northeast-1.amazonaws.com/text-to-img/d8e967a3-542c-47af-8cf2-93926c31d564-2024-02-20_08-19-26_image.jpg', views: 1500 },
+            { src: 'https://snafty-manga-dev.s3.ap-northeast-1.amazonaws.com/text-to-img/d8e967a3-542c-47af-8cf2-93926c31d564-2024-02-20_08-19-26_image.jpg', views: 1300 },
+            { src: 'https://snafty-manga-dev.s3.ap-northeast-1.amazonaws.com/text-to-img/d8e967a3-542c-47af-8cf2-93926c31d564-2024-02-20_08-19-26_image.jpg', views: 1100 }
         ]
     }
 ];
 
 const newHotData = [
-  { src: 'https://i.pinimg.com/736x/d2/c2/1e/d2c21edb97d151b570be0ad889063f18.jpg', title: 'Proud Princess' },
-  { src: 'https://i.pinimg.com/736x/d2/c2/1e/d2c21edb97d151b570be0ad889063f18.jpg', views: 'Hot', label: 'Bánh mì mua 1 tặng 1' },
-  { src: 'https://i.pinimg.com/736x/d2/c2/1e/d2c21edb97d151b570be0ad889063f18.jpg', views: 'Hot' }
+  { src: 'https://snafty-manga-dev.s3.ap-northeast-1.amazonaws.com/text-to-img/d8e967a3-542c-47af-8cf2-93926c31d564-2024-02-20_08-19-26_image.jpg', title: 'Proud Princess' },
+  { src: 'https://snafty-manga-dev.s3.ap-northeast-1.amazonaws.com/text-to-img/d8e967a3-542c-47af-8cf2-93926c31d564-2024-02-20_08-19-26_image.jpg', views: 'Hot', label: 'Bánh mì mua 1 tặng 1' },
+  { src: 'https://snafty-manga-dev.s3.ap-northeast-1.amazonaws.com/text-to-img/d8e967a3-542c-47af-8cf2-93926c31d564-2024-02-20_08-19-26_image.jpg', views: 'Hot' }
 ];
 
 const HomePage = () => {
@@ -46,6 +46,7 @@ const HomePage = () => {
                     <Card
                       cover={<img alt={`trending ${index}`} src={item.src} />}
                     >
+                        <Avatar size="small" icon={<FireOutlined />} src={item.src} />
                       <Card.Meta
                         title={`Views: ${item.views}`}
                       />
