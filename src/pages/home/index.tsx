@@ -14,6 +14,9 @@ const trendingData = [
         items: [
             { src: 'https://snafty-manga-dev.s3.ap-northeast-1.amazonaws.com/text-to-img/d8e967a3-542c-47af-8cf2-93926c31d564-2024-02-20_08-19-26_image.jpg', views: 1500 },
             { src: 'https://snafty-manga-dev.s3.ap-northeast-1.amazonaws.com/text-to-img/d8e967a3-542c-47af-8cf2-93926c31d564-2024-02-20_08-19-26_image.jpg', views: 1300 },
+            { src: 'https://snafty-manga-dev.s3.ap-northeast-1.amazonaws.com/text-to-img/d8e967a3-542c-47af-8cf2-93926c31d564-2024-02-20_08-19-26_image.jpg', views: 1100 },
+            { src: 'https://snafty-manga-dev.s3.ap-northeast-1.amazonaws.com/text-to-img/d8e967a3-542c-47af-8cf2-93926c31d564-2024-02-20_08-19-26_image.jpg', views: 1100 },
+            { src: 'https://snafty-manga-dev.s3.ap-northeast-1.amazonaws.com/text-to-img/d8e967a3-542c-47af-8cf2-93926c31d564-2024-02-20_08-19-26_image.jpg', views: 1100 },
             { src: 'https://snafty-manga-dev.s3.ap-northeast-1.amazonaws.com/text-to-img/d8e967a3-542c-47af-8cf2-93926c31d564-2024-02-20_08-19-26_image.jpg', views: 1100 }
         ]
     }
@@ -26,6 +29,7 @@ const newHotData = [
 ];
 
 const HomePage = () => {
+
   return (
     <Layout>
       <Header style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
@@ -45,10 +49,14 @@ const HomePage = () => {
                   <Col key={index} span={8}>
                     <Card
                       cover={<img alt={`trending ${index}`} src={item.src} />}
+                      onClick={() => {
+                        console.log('click');
+                      }}
                     >
-                        <Avatar size="small" icon={<FireOutlined />} src={item.src} />
                       <Card.Meta
-                        title={`Views: ${item.views}`}
+                        // title={`Views: ${item.views}`}
+                        description={trendingData[0].title}
+
                       />
                     </Card>
                   </Col>
