@@ -27,6 +27,17 @@
     <title>React App</title>
   </head>
   <body>
+    <script src="https://connect.facebook.net/en_US/fbinstant.6.3.js"></script>
+    <script>
+      FBInstant.initializeAsync().then(function() {
+        FBInstant.setLoadingProgress(100);
+        console.log('FBInstant.initializeAsync()  ');
+        FBInstant.startGameAsync().then(function() {
+          FBInstant.logEvent('game_started');
+          console.log('FBInstant.startGameAsync()  ');
+        });
+      });
+    </script>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <!--
