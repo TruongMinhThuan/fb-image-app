@@ -79,6 +79,11 @@ const HomePage = () => {
     }
   }
 
+  const onCloseProcessModal = () => {
+    setIsImageProcessModalOpen(false);
+    setProcessImage([])
+  }
+
   return (
     <Layout>
       <Header style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
@@ -94,6 +99,7 @@ const HomePage = () => {
           isOpen={isImageProcessModalOpen}
           setIsOpen={setIsImageProcessModalOpen}
           images={processImage}
+          onOk={onCloseProcessModal}
         />
         <Row gutter={[16, 16]}>
           <Col span={24}>
