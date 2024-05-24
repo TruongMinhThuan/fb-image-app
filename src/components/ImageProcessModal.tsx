@@ -2,6 +2,7 @@ import { DotChartOutlined } from '@ant-design/icons';
 import { Flex, Image, Modal, Skeleton, Space, Spin } from 'antd';
 import React from 'react';
 import ImageProcessButtons from './ImageProcessButtons';
+import useStore from '../store';
 
 interface ModalProps {
     title?: string;
@@ -17,23 +18,27 @@ interface ModalProps {
 
 const ImageProcessModal: React.FC<ModalProps> = (props) => {
     // const [open, setOpen] = useState(false);
-
+    const { ai_image, handleTxt2Img } = useStore((state) => state);
 
     const renderAIImage = () => {
 
-        let images = props.images;
+        // let images = props.images;
 
-        if (images.length > 0) {
-            return images.map((image, index) => {
+        if (ai_image.length > 0) {
+            return ai_image.map((image, index) => {
                 return (
                     <Image
                         key={index}
-                        src={"data:image/jpeg;base64," + image}
+                        src={image}
                     />
                 )
             })
         }
         return <Spin tip="Loading" size="large" />
+    }
+
+    const refreshImage = () => {
+
     }
 
     return (
@@ -64,7 +69,7 @@ const ImageProcessModal: React.FC<ModalProps> = (props) => {
                         renderAIImage()
                     }
                 </Flex>
-                <ImageProcessButtons />
+                <ImageProcessButtons onRefresh={handleTxt2Img} />
             </Modal>
         </>
     );

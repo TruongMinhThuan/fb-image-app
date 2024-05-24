@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { DownloadOutlined, FacebookFilled, RedoOutlined } from '@ant-design/icons';
 import { Button, Divider, Flex, Radio } from 'antd';
 import type { ConfigProviderProps } from 'antd';
+import useStore from '../store';
 
 type SizeType = ConfigProviderProps['componentSize'];
 
@@ -13,9 +14,12 @@ interface ImageProcessButtonsProps {
 }
 
 const ImageProcessButtons: React.FC<ImageProcessButtonsProps> = (props) => {
-  const [size, setSize] = useState<SizeType>('large'); // default is 'middle'
+  const [size, setSize] = useState<SizeType>('middle'); // default is 'middle'
+
+  const { setAiImage } = useStore((state) => state);
+
   return (
-    <Flex gap={12} style={{ margin: 6 }}>
+    <Flex gap={2} style={{ margin: 6 }}>
       <Button onClick={props.onRefresh} style={{ flex: 1 }} type="primary" icon={<RedoOutlined />} size={size}>
         Refresh
       </Button>

@@ -1,0 +1,93 @@
+{
+    "trendingData": [
+        {
+            "topic": "Trending #1 Weekly",
+            "items": [
+                {
+                    "src": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/9b64fd01-a4c5-4ecb-8c8f-cc8167a5c0bb/width=1176,quality=90/26072078-5775692-Portrait%20photo%20of%20muscular%20bearded%20guy%20in%20a%20worn%20mech%20suit,%20((light%20bokeh)),%20intricate,%20(steel%20metal%20[rust]),%20elegant,%20sharp%20foc.jpeg",
+                    "views": 1500,
+                    "prompt": "Portrait photo of muscular bearded guy in a worn mech suit, ((light bokeh)), intricate, (steel metal [rust]), elegant, sharp focus, photo by greg rutkowski, soft lighting, vibrant colors, (masterpiece), ((streets)), (detailed face:1.2), (glowing blue eyes:1.1) <lora:FilmVelvia3:0.4>  <lora:more_details:0.6>",
+                    "negative_prompt": "BadDream, ( UnrealisticDream:1.3)",
+                    "title": "Lorem ipsump dolor sit amet"
+                },
+                {
+                    "src": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/bfeca0a1-2311-4e2c-bf09-98f6d135c41f/width=1024,quality=90/26072164-1547547180-(8k,%20best%20quality,%20masterpiece_1.2),(best%20quality_1.0),%20(ultra%20highres_1.0),%20watercolor,%20a%20beautiful%20woman,%20shoulder,%20hair%20ribbo.jpeg",
+                    "views": 1500,
+                    "prompt": "(8k, best quality, masterpiece:1.2),(best quality:1.0), (ultra highres:1.0), watercolor, a beautiful woman, shoulder, hair ribbons, by agnes cecile, half body portrait, extremely luminous bright design, pastel colors, (ink:1.3), autumn lights",
+                    "negative_prompt": "BadDream",
+                    "title": "Lorem ipsump dolor sit amet"
+                },
+                {
+                    "src": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/33960d5b-c779-4837-941c-bc41f176f0b8/width=1024,quality=90/26072334-3889919804-fashion%20photography%20portrait%20of%20indian%20girl%20with%20blue%20hair,%20in%20lush%20jungle%20with%20flowers,%203d%20render,%20cgi,%20symetrical,%20octane%20rend.jpeg",
+                    "views": 1500,
+                    "prompt": "fashion photography portrait of indian girl with blue hair, in lush jungle with flowers, 3d render, cgi, symetrical, octane render, 35mm, bokeh, 9:16, (intricate details:1.12), hdr, (intricate details, hyperdetailed:1.15), (natural skin texture, hyperrealism, soft light, sharp:1.2), detailed, sunlight passing through foliage, india",
+                    "negative_prompt": "BadDream, ( UnrealisticDream:1.3)",
+                    "title": "Lorem ipsump dolor sit amet"
+                },
+                {
+                    "src": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/33960d5b-c779-4837-941c-bc41f176f0b8/width=1024,quality=90/26072334-3889919804-fashion%20photography%20portrait%20of%20indian%20girl%20with%20blue%20hair,%20in%20lush%20jungle%20with%20flowers,%203d%20render,%20cgi,%20symetrical,%20octane%20rend.jpeg",
+                    "views": 1500,
+                    "prompt": "fashion photography portrait of indian girl with blue hair, in lush jungle with flowers, 3d render, cgi, symetrical, octane render, 35mm, bokeh, 9:16, (intricate details:1.12), hdr, (intricate details, hyperdetailed:1.15), (natural skin texture, hyperrealism, soft light, sharp:1.2), detailed, sunlight passing through foliage, india",
+                    "negative_prompt": "BadDream, ( UnrealisticDream:1.3)",
+                    "title": "Lorem ipsump dolor sit amet"
+                },
+                {
+                    "src": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/33960d5b-c779-4837-941c-bc41f176f0b8/width=1024,quality=90/26072334-3889919804-fashion%20photography%20portrait%20of%20indian%20girl%20with%20blue%20hair,%20in%20lush%20jungle%20with%20flowers,%203d%20render,%20cgi,%20symetrical,%20octane%20rend.jpeg",
+                    "views": 1500,
+                    "prompt": "fashion photography portrait of indian girl with blue hair, in lush jungle with flowers, 3d render, cgi, symetrical, octane render, 35mm, bokeh, 9:16, (intricate details:1.12), hdr, (intricate details, hyperdetailed:1.15), (natural skin texture, hyperrealism, soft light, sharp:1.2), detailed, sunlight passing through foliage, india",
+                    "negative_prompt": "BadDream, ( UnrealisticDream:1.3)",
+                    "title": "Lorem ipsump dolor sit amet"
+                },
+                {
+                    "src": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/33960d5b-c779-4837-941c-bc41f176f0b8/width=1024,quality=90/26072334-3889919804-fashion%20photography%20portrait%20of%20indian%20girl%20with%20blue%20hair,%20in%20lush%20jungle%20with%20flowers,%203d%20render,%20cgi,%20symetrical,%20octane%20rend.jpeg",
+                    "views": 1500,
+                    "prompt": "fashion photography portrait of indian girl with blue hair, in lush jungle with flowers, 3d render, cgi, symetrical, octane render, 35mm, bokeh, 9:16, (intricate details:1.12), hdr, (intricate details, hyperdetailed:1.15), (natural skin texture, hyperrealism, soft light, sharp:1.2), detailed, sunlight passing through foliage, india",
+                    "negative_prompt": "BadDream, ( UnrealisticDream:1.3)",
+                    "title": "Lorem ipsump dolor sit amet "
+                },
+                {
+                    "src": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/9b64fd01-a4c5-4ecb-8c8f-cc8167a5c0bb/width=1176,quality=90/26072078-5775692-Portrait%20photo%20of%20muscular%20bearded%20guy%20in%20a%20worn%20mech%20suit,%20((light%20bokeh)),%20intricate,%20(steel%20metal%20[rust]),%20elegant,%20sharp%20foc.jpeg",
+                    "views": 1500,
+                    "prompt": "Portrait photo of muscular bearded guy in a worn mech suit, ((light bokeh)), intricate, (steel metal [rust]), elegant, sharp focus, photo by greg rutkowski, soft lighting, vibrant colors, (masterpiece), ((streets)), (detailed face:1.2), (glowing blue eyes:1.1) <lora:FilmVelvia3:0.4>  <lora:more_details:0.6>",
+                    "negative_prompt": "BadDream, ( UnrealisticDream:1.3)",
+                    "title": "Lorem ipsump dolor sit amet"
+                },
+                {
+                    "src": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/bfeca0a1-2311-4e2c-bf09-98f6d135c41f/width=1024,quality=90/26072164-1547547180-(8k,%20best%20quality,%20masterpiece_1.2),(best%20quality_1.0),%20(ultra%20highres_1.0),%20watercolor,%20a%20beautiful%20woman,%20shoulder,%20hair%20ribbo.jpeg",
+                    "views": 1500,
+                    "prompt": "(8k, best quality, masterpiece:1.2),(best quality:1.0), (ultra highres:1.0), watercolor, a beautiful woman, shoulder, hair ribbons, by agnes cecile, half body portrait, extremely luminous bright design, pastel colors, (ink:1.3), autumn lights",
+                    "negative_prompt": "BadDream",
+                    "title": "Lorem ipsump dolor sit amet"
+                },
+                {
+                    "src": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/33960d5b-c779-4837-941c-bc41f176f0b8/width=1024,quality=90/26072334-3889919804-fashion%20photography%20portrait%20of%20indian%20girl%20with%20blue%20hair,%20in%20lush%20jungle%20with%20flowers,%203d%20render,%20cgi,%20symetrical,%20octane%20rend.jpeg",
+                    "views": 1500,
+                    "prompt": "fashion photography portrait of indian girl with blue hair, in lush jungle with flowers, 3d render, cgi, symetrical, octane render, 35mm, bokeh, 9:16, (intricate details:1.12), hdr, (intricate details, hyperdetailed:1.15), (natural skin texture, hyperrealism, soft light, sharp:1.2), detailed, sunlight passing through foliage, india",
+                    "negative_prompt": "BadDream, ( UnrealisticDream:1.3)",
+                    "title": "Lorem ipsump dolor sit amet"
+                },
+                {
+                    "src": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/33960d5b-c779-4837-941c-bc41f176f0b8/width=1024,quality=90/26072334-3889919804-fashion%20photography%20portrait%20of%20indian%20girl%20with%20blue%20hair,%20in%20lush%20jungle%20with%20flowers,%203d%20render,%20cgi,%20symetrical,%20octane%20rend.jpeg",
+                    "views": 1500,
+                    "prompt": "fashion photography portrait of indian girl with blue hair, in lush jungle with flowers, 3d render, cgi, symetrical, octane render, 35mm, bokeh, 9:16, (intricate details:1.12), hdr, (intricate details, hyperdetailed:1.15), (natural skin texture, hyperrealism, soft light, sharp:1.2), detailed, sunlight passing through foliage, india",
+                    "negative_prompt": "BadDream, ( UnrealisticDream:1.3)",
+                    "title": "Lorem ipsump dolor sit amet"
+                },
+                {
+                    "src": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/33960d5b-c779-4837-941c-bc41f176f0b8/width=1024,quality=90/26072334-3889919804-fashion%20photography%20portrait%20of%20indian%20girl%20with%20blue%20hair,%20in%20lush%20jungle%20with%20flowers,%203d%20render,%20cgi,%20symetrical,%20octane%20rend.jpeg",
+                    "views": 1500,
+                    "prompt": "fashion photography portrait of indian girl with blue hair, in lush jungle with flowers, 3d render, cgi, symetrical, octane render, 35mm, bokeh, 9:16, (intricate details:1.12), hdr, (intricate details, hyperdetailed:1.15), (natural skin texture, hyperrealism, soft light, sharp:1.2), detailed, sunlight passing through foliage, india",
+                    "negative_prompt": "BadDream, ( UnrealisticDream:1.3)",
+                    "title": "Lorem ipsump dolor sit amet"
+                },
+                {
+                    "src": "https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/33960d5b-c779-4837-941c-bc41f176f0b8/width=1024,quality=90/26072334-3889919804-fashion%20photography%20portrait%20of%20indian%20girl%20with%20blue%20hair,%20in%20lush%20jungle%20with%20flowers,%203d%20render,%20cgi,%20symetrical,%20octane%20rend.jpeg",
+                    "views": 1500,
+                    "prompt": "fashion photography portrait of indian girl with blue hair, in lush jungle with flowers, 3d render, cgi, symetrical, octane render, 35mm, bokeh, 9:16, (intricate details:1.12), hdr, (intricate details, hyperdetailed:1.15), (natural skin texture, hyperrealism, soft light, sharp:1.2), detailed, sunlight passing through foliage, india",
+                    "negative_prompt": "BadDream, ( UnrealisticDream:1.3)",
+                    "title": "Lorem ipsump dolor sit amet "
+                }
+            ]
+        }
+    ]
+}

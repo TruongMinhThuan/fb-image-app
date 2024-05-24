@@ -1,0 +1,1 @@
+export { default as TRENDING_DATA } from './trending_data.json'
