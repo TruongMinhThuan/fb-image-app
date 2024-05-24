@@ -1,5 +1,7 @@
-import React, { useState } from 'react';
-import { Alert, Button, Image, Modal, Skeleton, Spin } from 'antd';
+import { DotChartOutlined } from '@ant-design/icons';
+import { Flex, Image, Modal, Skeleton, Space, Spin } from 'antd';
+import React from 'react';
+import ImageProcessButtons from './ImageProcessButtons';
 
 interface ModalProps {
     title?: string;
@@ -10,11 +12,29 @@ interface ModalProps {
     onCancel?: () => void;
     width?: number;
     images: string[];
+    onRefresh?: () => void;
 }
 
 const ImageProcessModal: React.FC<ModalProps> = (props) => {
     // const [open, setOpen] = useState(false);
 
+
+    const renderAIImage = () => {
+
+        let images = props.images;
+
+        if (images.length > 0) {
+            return images.map((image, index) => {
+                return (
+                    <Image
+                        key={index}
+                        src={"data:image/jpeg;base64," + image}
+                    />
+                )
+            })
+        }
+        return <Spin tip="Loading" size="large" />
+    }
 
     return (
         <>
@@ -22,27 +42,29 @@ const ImageProcessModal: React.FC<ModalProps> = (props) => {
                 centered
                 open={props.isOpen}
                 onOk={props.onOk}
-            // onCancel={() => props.setIsOpen(false)}
+                onCancel={props.onOk}
+                closeIcon={false}
+                style={{
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                }}
+                okButtonProps={{
+                    style: {
+                        display: 'none',
+                    },
+                }}
+                cancelButtonProps={{
+                    style: {
+                        display: 'none',
+                    },
+                }}
             >
-                <div style={{justifyContent:'center',alignItems:'center'}} >
+                <Flex gap="small" style={{ justifyContent: 'center', alignItems: 'center', minHeight: 200 }}>
                     {
-                        props.images?.length > 0 ?
-                            <Image
-                                // width={200}
-                                src={"data:image/jpeg;base64," + props.images[0]}
-                            /> :
-                            <Skeleton.Avatar
-                                active={true}
-                                size={'large'}
-                                shape={'square'}
-                                style={{ minWidth: 200, minHeight: 200 }}
-                            />
-
-
+                        renderAIImage()
                     }
-
-
-                </div>
+                </Flex>
+                <ImageProcessButtons />
             </Modal>
         </>
     );
