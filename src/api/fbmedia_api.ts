@@ -6,9 +6,8 @@ import { FBMediaAI } from "../types/fbmedia_type";
 
 
 export const getFBMediaList = async (): Promise<FBMediaAI[]> => {
-    const response = await api.get<FBMediaAI[]>('/fbapi/fbmedia');
-    console.log('====================================');
-    console.log(response.data);
-    console.log('====================================');
-    return response.data;
+    const response = await api.get<FBMediaAI[]>('https://blog-api.thuantr.site/fbapi/fbmedia/');
+
+    const data = response.data
+    return data;
 };

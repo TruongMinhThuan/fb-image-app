@@ -3,6 +3,8 @@ import { Flex, Image, Modal, Skeleton, Space, Spin } from 'antd';
 import React from 'react';
 import ImageProcessButtons from './ImageProcessButtons';
 import useStore from '../store';
+import PuzzleImageGame from './PuzzleImageGame';
+import { Navigate, useNavigate } from 'react-router-dom';
 
 interface ModalProps {
     title?: string;
@@ -18,7 +20,8 @@ interface ModalProps {
 
 const ImageProcessModal: React.FC<ModalProps> = (props) => {
     // const [open, setOpen] = useState(false);
-    const { ai_image, handleTxt2Img } = useStore((state) => state);
+    const { ai_image, handleTxt2Img, getRandomAIImage } = useStore((state) => state);
+    const navigate = useNavigate();
 
     const renderAIImage = () => {
 
@@ -37,8 +40,8 @@ const ImageProcessModal: React.FC<ModalProps> = (props) => {
         return <Spin tip="Loading" size="large" />
     }
 
-    const refreshImage = () => {
-
+    const hanleNavigateToPuzzle = () => {
+        navigate('/puzzle-game', { state: { image_url: ai_image[0] } })
     }
 
     return (
@@ -69,7 +72,7 @@ const ImageProcessModal: React.FC<ModalProps> = (props) => {
                         renderAIImage()
                     }
                 </Flex>
-                <ImageProcessButtons onRefresh={handleTxt2Img} />
+                <ImageProcessButtons onRefresh={getRandomAIImage} onPlayPuzzle={hanleNavigateToPuzzle} />
             </Modal>
         </>
     );

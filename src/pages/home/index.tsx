@@ -10,6 +10,7 @@ import { api } from '../../api';
 import useStore from '../../store';
 import { TRENDING_DATA } from '../../dummy'
 import { useEffect } from 'react';
+import { FBMediaAI } from '../../types/fbmedia_type';
 
 const { Header, Content } = Layout;
 
@@ -22,9 +23,9 @@ const newHotData = [
 const HomePage = () => {
   const [isImageProcessModalOpen, setIsImageProcessModalOpen] = useState(false);
   const { handleTxt2Img, is_processing_image, fbmedias, getFBMediaList } = useStore((state) => state);
-  const onClickImageProcess = (item: any) => {
+  const onClickImageProcess = (item: FBMediaAI) => {
     setIsImageProcessModalOpen(true)
-    handleTxt2Img()
+    handleTxt2Img(item)
   }
 
   const [processImage, setProcessImage] = useState<string[]>([]);
@@ -35,20 +36,12 @@ const HomePage = () => {
     setProcessImage([])
   }
 
-  useEffect(()=>{
+  useEffect(() => {
     getFBMediaList()
-  },[])
+  }, [])
 
   return (
     <Layout>
-      <Header style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-        <Avatar size="large" icon={<UserOutlined />} />
-        <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['2']}>
-          <Menu.Item key="1" icon={<FireOutlined />}>Hot</Menu.Item>
-          <Menu.Item key="2" icon={<UserOutlined />}>Profile</Menu.Item>
-          <Menu.Item key="3" icon={<SettingOutlined />}>Settings</Menu.Item>
-        </Menu>
-      </Header>
       <Content style={{ marginTop: '16px' }}>
         <ImageProcessModal
           isOpen={isImageProcessModalOpen}
@@ -57,12 +50,12 @@ const HomePage = () => {
           onOk={onCloseProcessModal}
         />
         <Flex wrap >
-          <Card title="Trending">
+          <Card >
             <Row gutter={[2, 2]}>
               {fbmedias.map((item, index) => (
                 <Col key={index} span={8}  >
                   <Card
-                    cover={<img alt={`trending ${index}`} src={item.src} style={{
+                    cover={<img alt={`trending ${index}`} src={item.image_url} style={{
                       objectFit: 'cover',
                       height: '150px',
                     }} />}

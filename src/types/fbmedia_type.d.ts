@@ -1,6 +1,6 @@
 export interface FBMediaAI {
     id: number;
-    src: string;
+    image_url: string;
     views: number;
     prompt: string;
     negative_prompt: string;
