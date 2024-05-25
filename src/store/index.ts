@@ -16,6 +16,9 @@ interface State {
     fbmedias: FBMediaAI[];
     is_page_loading: boolean;
     getRandomAIImage: () => void;
+    puzzle_image: string;
+    is_puzzle_open: boolean;
+    togglePuzzle: (value: boolean) => void;
 }
 
 const waiting = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
@@ -27,6 +30,8 @@ const useStore = create<State>((set, get) => ({
     is_processing_image: false,
     fbmedias: [],
     is_page_loading: false,
+    puzzle_image: '',
+    is_puzzle_open: false,
     increaseCount: () => set((state) => ({ count: state.count + 1 })),
     decreaseCount: () => set((state) => ({ count: state.count - 1 })),
     setAiImage(ai_image: string[]) {
@@ -89,7 +94,13 @@ const useStore = create<State>((set, get) => ({
             console.log(error);
 
         }
-    }
+    },
+    selectePuzzleImage: (image: string) => {
+        set({ puzzle_image: image });
+    },
+    togglePuzzle: (value: boolean) => {
+        set((state) => ({ is_puzzle_open: value }));
+    },
 }));
 
 

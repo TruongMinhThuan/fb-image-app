@@ -11,6 +11,7 @@ import useStore from '../../store';
 import { TRENDING_DATA } from '../../dummy'
 import { useEffect } from 'react';
 import { FBMediaAI } from '../../types/fbmedia_type';
+import PuzzleImageGame from '../../components/PuzzleImageGameModal';
 
 const { Header, Content } = Layout;
 
@@ -22,7 +23,14 @@ const newHotData = [
 
 const HomePage = () => {
   const [isImageProcessModalOpen, setIsImageProcessModalOpen] = useState(false);
-  const { handleTxt2Img, is_processing_image, fbmedias, getFBMediaList } = useStore((state) => state);
+  const {
+    handleTxt2Img,
+    is_processing_image,
+    fbmedias,
+    is_puzzle_open,
+    getFBMediaList,
+    ai_image
+  } = useStore((state) => state);
   const onClickImageProcess = (item: FBMediaAI) => {
     setIsImageProcessModalOpen(true)
     handleTxt2Img(item)
@@ -48,6 +56,10 @@ const HomePage = () => {
           setIsOpen={setIsImageProcessModalOpen}
           images={processImage}
           onOk={onCloseProcessModal}
+        />
+        <PuzzleImageGame
+          image_url={ai_image[0]}
+          is_open={is_puzzle_open}
         />
         <Flex wrap >
           <Card >

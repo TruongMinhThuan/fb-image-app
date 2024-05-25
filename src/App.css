@@ -47,7 +47,7 @@
 .square{
   display: inline-block;
   border: 1px;
-  border-color:black;
+  border-color:#ffffff;
   border-style: solid;
   border-radius: 4px;
   background-color: #eeeeee;

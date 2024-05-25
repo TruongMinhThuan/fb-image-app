@@ -3,7 +3,7 @@ import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import MainLayout from '../components/MainLayout';
 import HomePage from '../pages/home';
-import PuzzleImageGame from '../components/PuzzleImageGame';
+import PuzzleImageGame from '../components/PuzzleImageGameModal';
 const Router: React.FC = () => {
   return (
     <BrowserRouter>
