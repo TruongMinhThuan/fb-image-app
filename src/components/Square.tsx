@@ -12,7 +12,7 @@ interface SquareProps {
 export default function Square(props: SquareProps) {
     let TILE_SIZE = 171; // Adjusted to fit within 512x512 grid
     if (window.innerWidth < 768) {
-        TILE_SIZE = 120;
+        TILE_SIZE = 108;
     }
 
     const index = props.num - 1;

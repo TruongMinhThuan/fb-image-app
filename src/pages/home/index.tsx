@@ -29,11 +29,13 @@ const HomePage = () => {
     fbmedias,
     is_puzzle_open,
     getFBMediaList,
-    ai_image
+    ai_image,
+    setSelectedAiImage
   } = useStore((state) => state);
   const onClickImageProcess = (item: FBMediaAI) => {
     setIsImageProcessModalOpen(true)
     handleTxt2Img(item)
+    setSelectedAiImage(item)
   }
 
   const [processImage, setProcessImage] = useState<string[]>([]);
@@ -66,16 +68,22 @@ const HomePage = () => {
             <Row gutter={[2, 2]}>
               {fbmedias.map((item, index) => (
                 <Col key={index} span={8}  >
-                  <Card
-                    cover={<img alt={`trending ${index}`} src={item.image_url} style={{
-                      objectFit: 'cover',
-                      height: '150px',
-                    }} />}
+                  <div
+
                     onClick={() => onClickImageProcess(item)}
-                    style={{ cursor: 'pointer', height: '100%' }}
+                    style={{ cursor: 'pointer' }}
                   >
-                    <p>{item.title}</p>
-                  </Card>
+                    <img
+                      alt={`trending ${index}`}
+                      src={item.image_url}
+                      style={{
+                        objectFit: 'cover',
+                        height: '150px',
+                        width: '100%',
+                      }}
+                    />
+                    <span style={{ color: 'gray' }}>{item.title}</span>
+                  </div>
                 </Col>
               ))}
             </Row>

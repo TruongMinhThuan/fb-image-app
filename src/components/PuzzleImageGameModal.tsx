@@ -81,7 +81,7 @@ export default function PuzzleImageGame(props: PuzzleImageGameProps) {
       open={props.is_open}
       onOk={closePuzzle}
       onCancel={closePuzzle}
-      closeIcon={false}
+      closeIcon={true}
       style={{
         justifyContent: 'center',
         alignItems: 'center',
@@ -98,15 +98,9 @@ export default function PuzzleImageGame(props: PuzzleImageGameProps) {
       }}
     >
 
-      <Space style={{ paddingTop: 10, paddingBlock: 80 }}>
+      <Space style={{ paddingTop: 10, paddingBlock: 80,alignSelf:'center'}}>
         <div
-          style={{
-            justifyContent: "center",
-            alignItems: "center",
-            width: "100%",
-            alignSelf: "center",
-
-          }}
+       
         >
           <div className="board" style={{ paddingTop: 20 }}>
             {board_values.map((x, index) => (
@@ -118,10 +112,6 @@ export default function PuzzleImageGame(props: PuzzleImageGameProps) {
 
             ))}
           </div>
-          {/* <button className="shuffle" onClick={handleShuffleClick}>
-        {" "}
-        Shuffle
-      </button> */}
           <div>
             {win_state === 1 ? (
               <h1 style={{ color: "green" }}>
@@ -131,8 +121,6 @@ export default function PuzzleImageGame(props: PuzzleImageGameProps) {
               <h1 style={{ color: "red" }}>Keep Trying!</h1>
             )}
           </div>
-
-          {/* <Button onClick={handleWinPuzzle}>Win</Button> */}
           <Button onClick={handleShuffleClick}>Share</Button>
         </div>
       </Space>

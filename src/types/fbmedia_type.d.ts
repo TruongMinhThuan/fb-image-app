@@ -1,13 +1,18 @@
 export interface FBMediaAI {
     id: number;
     image_url: string;
-    views: number;
+    checkpoint: number;
+    title: string;
+    stable_diffusion: StableDiffusion;
+}
+
+export interface StableDiffusion {
+    id: number;
     prompt: string;
     negative_prompt: string;
-    title: string;
     steps: number;
     cfg_scale: number;
-    seed: number | null;
+    seed: number;
     height: number;
     width: number;
     sampler: string;

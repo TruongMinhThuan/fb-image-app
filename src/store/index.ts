@@ -19,6 +19,8 @@ interface State {
     puzzle_image: string;
     is_puzzle_open: boolean;
     togglePuzzle: (value: boolean) => void;
+    selected_ai_image: FBMediaAI;
+    setSelectedAiImage: (selected_ai_image: FBMediaAI) => void;
 }
 
 const waiting = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
@@ -32,10 +34,14 @@ const useStore = create<State>((set, get) => ({
     is_page_loading: false,
     puzzle_image: '',
     is_puzzle_open: false,
+    selected_ai_image: {} as FBMediaAI,
     increaseCount: () => set((state) => ({ count: state.count + 1 })),
     decreaseCount: () => set((state) => ({ count: state.count - 1 })),
     setAiImage(ai_image: string[]) {
         set({ ai_image });
+    },
+    setSelectedAiImage: (selected_ai_image: FBMediaAI) => {
+        set({ selected_ai_image });
     },
     handleTxt2Img: async (item: FBMediaAI) => {
         try {
@@ -51,7 +57,6 @@ const useStore = create<State>((set, get) => ({
             if (is_base64) {
                 image = "data:image/jpeg;base64," + image_data;
             }
-
             set({ ai_image: [image] });
             return image;
         } catch (error) {
@@ -63,6 +68,8 @@ const useStore = create<State>((set, get) => ({
         try {
             set({ is_page_loading: true });
             const fbmedias = await getFBMediaList();
+            console.log(fbmedias);
+
             set({ fbmedias });
         } catch (error) {
             console.log(error);

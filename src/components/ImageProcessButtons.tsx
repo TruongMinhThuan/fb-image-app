@@ -24,9 +24,9 @@ const ImageProcessButtons: React.FC<ImageProcessButtonsProps> = (props) => {
     <Flex gap={2} style={{ margin: 6 }}>
       <Button onClick={props.onRefresh} style={{ flex: 1 }} type="primary" icon={<RedoOutlined />} size={size}>
       </Button>
-      <Button onClick={props.onShare} style={{ flex: 1 }} type="primary" icon={<FacebookFilled />} size={size}>
+      {/* <Button onClick={props.onShare} style={{ flex: 1 }} type="primary" icon={<FacebookFilled />} size={size}>
       </Button>
-      <Button onClick={props.onDownload} style={{ flex: 1 }} type="primary" icon={<DownloadOutlined />} size={size} />
+      <Button onClick={props.onDownload} style={{ flex: 1 }} type="primary" icon={<DownloadOutlined />} size={size} /> */}
       <Button onClick={props.onPlayPuzzle} style={{ flex: 1 }} type="primary" icon={<PlayCircleOutlined />} size={size}>
       </Button>
     </Flex>
