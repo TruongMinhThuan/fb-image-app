@@ -10,7 +10,7 @@ import { api } from '../../api';
 import useStore from '../../store';
 import { TRENDING_DATA } from '../../dummy'
 import { useEffect } from 'react';
-import { FBMediaAI } from '../../types/fbmedia_type';
+import { FBMediaAI, StableDiffusion } from '../../types/fbmedia_type';
 import PuzzleImageGame from '../../components/PuzzleImageGameModal';
 
 const { Header, Content } = Layout;
@@ -34,14 +34,18 @@ const HomePage = () => {
   } = useStore((state) => state);
   const onClickImageProcess = (item: FBMediaAI) => {
     setIsImageProcessModalOpen(true)
-    item.stable_diffusion.width = 512
-    item.stable_diffusion.height = 512
-    item.stable_diffusion.negative_prompt = "BadDream, (UnrealisticDream:1.3)"
-    item.stable_diffusion.steps = 24
-    item.stable_diffusion.cfg_scale = 2
-    item.stable_diffusion.seed = -1
-    item.stable_diffusion.batch_size = 1
-    handleTxt2Img(item.stable_diffusion)
+    
+    let model: StableDiffusion = item.stable_diffusion
+    model.steps = 24
+    model.height = 512
+    model.width = 512
+    model.batch_size = 1
+    model.seed = -1
+    model.cfg_scale = 2
+    model.negative_prompt = "BadDream, (UnrealisticDream:1.3)"
+    model.prompt = "(masterpiece), (extremely intricate:1.3), (realistic)"
+
+    handleTxt2Img(model)
     setSelectedAiImage(item)
   }
 
