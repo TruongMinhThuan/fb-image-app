@@ -34,7 +34,14 @@ const HomePage = () => {
   } = useStore((state) => state);
   const onClickImageProcess = (item: FBMediaAI) => {
     setIsImageProcessModalOpen(true)
-    handleTxt2Img(item)
+    item.stable_diffusion.width = 512
+    item.stable_diffusion.height = 512
+    item.stable_diffusion.negative_prompt = "BadDream, (UnrealisticDream:1.3)"
+    item.stable_diffusion.steps = 24
+    item.stable_diffusion.cfg_scale = 2
+    item.stable_diffusion.seed = -1
+    item.stable_diffusion.batch_size = 1
+    handleTxt2Img(item.stable_diffusion)
     setSelectedAiImage(item)
   }
 

@@ -24,7 +24,8 @@ const ImageProcessModal: React.FC<ModalProps> = (props) => {
         ai_image,
         getRandomAIImage,
         togglePuzzle,
-        selected_ai_image
+        selected_ai_image,
+        handleTxt2Img
     } = useStore((state) => state);
 
     const renderAIImage = () => {
@@ -60,6 +61,22 @@ const ImageProcessModal: React.FC<ModalProps> = (props) => {
         setValue(selected_ai_image.stable_diffusion?.prompt)
     }, [selected_ai_image.id])
 
+    const handleTxt2ImgAiImage = () => {
+        let model = selected_ai_image.stable_diffusion
+
+        let custom_prompt = "(masterpiece), (extremely intricate:1.3), (realistic)"
+
+        model.prompt = `${value}, ${custom_prompt}`
+        model.negative_prompt = "BadDream, (UnrealisticDream:1.3)"
+        model.steps = 24
+        model.cfg_scale = 2
+        model.seed = -1
+        model.height = 512
+        model.width = 512
+        model.batch_size = 1
+        handleTxt2Img(model)
+    }
+
     return (
         <>
             <Modal
@@ -93,7 +110,7 @@ const ImageProcessModal: React.FC<ModalProps> = (props) => {
                         renderAIImage()
                     }
                 </Flex>
-                <ImageProcessButtons onRefresh={getRandomAIImage} onPlayPuzzle={hanleNavigateToPuzzle} />
+                <ImageProcessButtons onRefresh={handleTxt2ImgAiImage} onPlayPuzzle={hanleNavigateToPuzzle} />
                 <TextArea
                     value={value}
                     onChange={(e) => setValue(e.target.value)}

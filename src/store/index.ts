@@ -1,7 +1,7 @@
 // src/store.ts
 import { create } from 'zustand';
-import { getFBMediaList } from '../api/fbmedia_api';
-import { FBMediaAI } from '../types/fbmedia_type';
+import { getFBMediaList, text2img } from '../api/fbmedia_api';
+import { FBMediaAI, StableDiffusion } from '../types/fbmedia_type';
 
 // Define the shape of your store's state
 interface State {
@@ -10,7 +10,7 @@ interface State {
     increaseCount: () => void;
     decreaseCount: () => void;
     setAiImage: (ai_image: string[]) => void;
-    handleTxt2Img: (item: FBMediaAI) => void;
+    handleTxt2Img: (item: StableDiffusion) => void;
     is_processing_image: boolean;
     getFBMediaList: () => void;
     fbmedias: FBMediaAI[];
@@ -43,17 +43,17 @@ const useStore = create<State>((set, get) => ({
     setSelectedAiImage: (selected_ai_image: FBMediaAI) => {
         set({ selected_ai_image });
     },
-    handleTxt2Img: async (item: FBMediaAI) => {
+    handleTxt2Img: async (item?: StableDiffusion) => {
         try {
             set({ ai_image: [], is_processing_image: true });
-            // let res = await api.post('/sdapi/v1/txt2img', txt2imgRequest)
-            let image_data = await waiting(1200)
+            
+            let image_data = await text2img(item);
+            // let image_data = await waiting(1200)
 
-            console.log(image_data);
 
-            const is_base64 = false
+            const is_base64 = true
 
-            let image = item.image_url
+            let image = ""
             if (is_base64) {
                 image = "data:image/jpeg;base64," + image_data;
             }
